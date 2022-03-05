@@ -82,28 +82,4 @@ class virtual_card:
 
     def open_virtual_card(self):
         self.virtual_card_dict["state"] = "OPEN"
-        
-
-# Sample card parameters
-use = "Rent"
-spending_limit = 1000
-account_number = "1234567"
-routing_number = "623852453"
-
-# Initiating funding card
-personal_card = funding_card(account_number, routing_number) 
-personal_card.initiate_funding_card()
-print(personal_card.funding_card_dict)
-
-# Validating funding card
-personal_card.validate_funding_card()
-print(personal_card.funding_card_validation_dict)
-
-# Creating virtual card
-group_card = virtual_card(use, spending_limit, personal_card.funding_card_token)
-group_card.initiate_virtual_card()
-print(group_card.virtual_card_dict)
-
-# Making virtual card usable
-group_card.open_virtual_card()
-print(group_card.virtual_card_dict)
+    
